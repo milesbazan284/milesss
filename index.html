@@ -1,33 +1,188 @@
-<section class="products">
-        <h2>Productos Destacados</h2>
-        <div class="product-grid">
-            
-            <!-- PRODUCTO 1: POLO MILES DREAMS NEGRO -->
-            <div class="product-card">
-                <div class="product-img-container" style="background: #111; border: 1px solid #222; border-radius: 4px; overflow: hidden; display: flex; justify-content: center; align-items: center; margin-bottom: 15px; height: 350px;">
-                    <img src="Gemini_Generated_Image_d4h1cdd4h1cdd4h1.png" alt="Polo MILES DREAMS Negro" style="width: 100%; height: 100%; object-fit: contain; padding: 15px;">
-                </div>
-                <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">MILES DREAMS Tee - Black</h3>
-                <p class="price" style="color: #fff; font-weight: bold; font-size: 1rem;">S/. 50.00</p>
-            </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MILES | Streetwear</title>
+    <style>
+        /* Estilos Base - Estética Streetwear */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
 
-            <!-- PRODUCTO 2: POLO MILES DREAMS BLANCO -->
-            <div class="product-card">
-                <div class="product-img-container" style="background: #fdfdfd; border: 1px solid #222; border-radius: 4px; overflow: hidden; display: flex; justify-content: center; align-items: center; margin-bottom: 15px; height: 350px;">
-                    <img src="MILES MD BLANCO.png" alt="Polo MILES DREAMS Blanco" style="width: 100%; height: 100%; object-fit: contain; padding: 15px;">
-                </div>
-                <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">MILES DREAMS Tee - White</h3>
-                <p class="price" style="color: #fff; font-weight: bold; font-size: 1rem;">S/. 50.00</p>
-            </div>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+            letter-spacing: 1px;
+        }
 
-            <!-- PRODUCTO 3: PRÓXIMO LANZAMIENTO -->
-            <div class="product-card">
-                <div class="product-img-container" style="background: #111; border: 1px solid #222; border-radius: 4px; display: flex; justify-content: center; align-items: center; margin-bottom: 15px; height: 350px; color: #444; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem;">
-                    Próximamente
-                </div>
-                <h3 style="color: #666; font-size: 1.1rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">3D Puff Print Cap</h3>
-                <p class="price" style="color: #444; font-weight: bold; font-size: 1rem;">S/. --.--</p>
-            </div>
+        /* Navegación */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #1a1a1a;
+        }
 
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #888888;
+        }
+
+        /* Hero Section - Centrado de Logo Principal */
+        .hero {
+            height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+            padding: 20px;
+        }
+
+        .hero-logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 450px;
+            width: 100%;
+        }
+
+        .hero-logo {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Productos Destacados */
+        .products {
+            padding: 60px 40px;
+        }
+
+        .products h2 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: #111111;
+            border: 1px solid #1a1a1a;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 350px;
+            background-color: #1a1a1a;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #444444;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .product-card h3 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #888888;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #1a1a1a;
+            color: #444444;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">MILES</div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Colección</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-logo-container">
+            <img src="LOGO FUEGO ROJO.png" alt="Logo MILES" class="hero-logo">
         </div>
     </section>
+
+    <section class="products">
+        <h2>Productos Destacados</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img">Oversized Hoodie (Próximamente)</div>
+                <h3>Graphic Hoodie</h3>
+                <p class="price">S/. --.--</p>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Streetwear Tee (Próximamente)</div>
+                <h3>Heavyweight T-Shirt</h3>
+                <p class="price">S/. --.--</p>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Custom Cap (Próximamente)</div>
+                <h3>3D Puff Print Cap</h3>
+                <p class="price">S/. --.--</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 MILES. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
