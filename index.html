@@ -187,18 +187,15 @@
            <!-- PRODUCTO 1: POLO MILES DREAMS NEGRO -->
 <div class="tarjeta-de-producto" style="background: #111; padding: 20px; border: 1px solid #222; border-radius: 8px; max-width: 900px; margin: 20px auto; font-family: sans-serif;">
     
-    <!-- CONTENEDOR PRINCIPAL: Al hacerle clic, activa la función para mostrar el costado -->
     <div style="display: flex; gap: 40px; align-items: center;">
         
-        <!-- PARTE VISIBLE (La foto y el precio inicial que sí se pueden clickear) -->
-        <div onclick="mostrarDetalles(this)" style="flex: 1; background: #fdfdfd; padding: 20px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+        <div style="flex: 1; background: #fdfdfd; padding: 20px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
             <img src="polo-negro.png" alt="Polo MILES DREAMS Negro" style="width: 100%; max-width: 350px; object-fit: contain;">
         </div>
 
-        <!-- PARTE OCULTA: Solo aparecerá cuando le des clic a la foto del polo -->
-        <div class="informacion-interna" style="flex: 1; display: none; flex-direction: column; justify-content: center; color: #fff;">
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; color: #fff;">
             
-            <h1 style="font-size: 2rem; margin: 0 0 10px 0; text-transform: uppercase; color: #fff;">
+            <h1 id="nombre-producto" style="font-size: 2rem; margin: 0 0 10px 0; text-transform: uppercase; color: #fff;">
                 Camiseta MILES DREAMS - Negra
             </h1>
             
@@ -208,17 +205,16 @@
             
             <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
             
-            <!-- SECCIÓN DE TALLAS -->
-            <p style="margin-bottom: 10px; font-size: 0.9rem; color: #aaa;">Talla: Selecciona Talla</p>
+            <p style="margin-bottom: 10px; font-size: 0.9rem; color: #aaa;">Talla: <span id="talla-seleccionada-texto" style="color: #fff; font-weight: bold;">Selecciona Talla</span></p>
+            
             <div class="selector-tallas" style="display: flex; gap: 10px; margin-bottom: 30px;">
-                <span style="border: 1px solid #fff; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold; color: #fff;">S</span>
-                <span style="border: 1px solid #fff; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold; color: #fff;">M</span>
-                <span style="border: 1px solid #fff; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold; color: #fff;">L</span>
-                <span style="border: 1px solid #fff; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold; color: #fff;">XL</span>
+                <span onclick="seleccionarTalla(this)" class="boton-talla" style="border: 1px solid #fff; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold; color: #fff; transition: 0.2s;">S</span>
+                <span onclick="seleccionarTalla(this)" class="boton-talla" style="border: 1px solid #fff; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold; color: #fff; transition: 0.2s;">M</span>
+                <span onclick="seleccionarTalla(this)" class="boton-talla" style="border: 1px solid #fff; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold; color: #fff; transition: 0.2s;">L</span>
+                <span onclick="seleccionarTalla(this)" class="boton-talla" style="border: 1px solid #fff; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold; color: #fff; transition: 0.2s;">XL</span>
             </div>
             
-            <!-- BOTÓN DE COMPRA -->
-            <button style="background: #fff; color: #000; border: none; padding: 15px; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; text-transform: uppercase; width: 100%;">
+            <button onclick="procesarCompra()" style="background: #fff; color: #000; border: none; padding: 15px; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; text-transform: uppercase; width: 100%;">
                 Comprar ahora
             </button>
             
@@ -227,20 +223,42 @@
     </div>
 </div>
 
-<!-- SCRIPT: El código inteligente que hace aparecer la información al hacer clic -->
 <script>
-function mostrarDetalles(elementoClickado) {
-    // Busca el bloque de información que está al costado de la imagen
-    var infoColumna = elementoClickado.nextElementSibling;
-    
-    // Si está oculto, lo muestra con estilo flex. Si se vuelve a tocar, se oculta.
-    if (infoColumna.style.display === "none" || infoColumna.style.display === "") {
-        infoColumna.style.display = "flex";
-    } else {
-        infoColumna.style.display = "none";
+let tallaSeleccionada = "";
+
+function seleccionarTalla(elemento) {
+    let botones = document.querySelectorAll('.boton-talla');
+    botones.forEach(btn => {
+        btn.style.background = "transparent";
+        btn.style.color = "#fff";
+    });
+
+    elemento.style.background = "#fff";
+    elemento.style.color = "#000";
+
+    tallaSeleccionada = elemento.innerText;
+    document.getElementById('talla-seleccionada-texto').innerText = tallaSeleccionada;
+}
+
+function procesarCompra() {
+    if (tallaSeleccionada === "") {
+        alert("Por favor, selecciona una talla antes de comprar.");
+        return;
     }
+
+    // Tu número real ya vinculado
+    const numeroTelefono = "51949776995"; 
+    const nombreProducto = document.getElementById('nombre-producto').innerText.trim();
+    const precio = "S/. 50.00";
+
+    // Mensaje automático para tu chat
+    const mensaje = `¡Hola! Me interesa comprar la ${nombreProducto}.%0A*Talla:* ${tallaSeleccionada}%0A*Precio:* ${precio}%0A¿Tienen stock disponible?`;
+    const enlaceWhatsApp = `https://wa.me/${numeroTelefono}?text=${mensaje}`;
+    
+    window.open(enlaceWhatsApp, '_blank');
 }
 </script>
+            
             <!-- PRODUCTO 2: POLO MILES DREAMS BLANCO -->
             <div class="product-card">
                 <div class="product-img-container" style="background: #fdfdfd; border: 1px solid #222; border-radius: 4px; overflow: hidden; display: flex; justify-content: center; align-items: center; margin-bottom: 15px; height: 350px;">
