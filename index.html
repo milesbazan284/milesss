@@ -313,7 +313,60 @@
         </div>
     </div>
 
+<!-- TARJETA DE PRODUCTO MILES -->
+<div class="tarjeta-de-producto" style="background: #111; padding: 20px; border: 1px solid #222; border-radius: 8px; color: #fff; position: relative; box-sizing: border-box; font-family: sans-serif;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
 
+        <!-- CONTENEDOR DEL SLIDER (Fondo Blanco Puro y todo es un enlace a WhatsApp) -->
+        <div class="contenedor-slider-prenda" id="slider-metal-p5" style="background: #ffffff; border-radius: 4px; position: relative; min-height: 350px; display: flex; overflow: hidden; justify-content: center; align-items: center;">
+            
+            <!-- ENLACE DE WHATSAPP QUE CUBRE TODO EL POLO -->
+            <a href="https://wa.me/51949776995?text=Hola%20MILES,%20me%20interesa%20el%20Polo%20Miles%20Dreams%20Blanco.%20¿Me%20podrían%20enviar%20la%20tabla%20de%20tallas?" 
+               target="_blank" 
+               style="display: flex; width: 100%; height: 100%; text-decoration: none; cursor: pointer; z-index: 1;">
+                
+                <!-- ENVOLTORIO DE LAS IMÁGENES (FRENTE Y ESPALDA) -->
+                <div class="wrapper-imagenes" style="display: flex; width: 100%; transition: transform 0.3s ease-in-out;">
+                    
+                    <!-- Vista Frente -->
+                    <div style="min-width: 100%; display: flex; justify-content: center; align-items: center; padding: 10px; box-sizing: border-box;">
+                        <img src="polo-metal-frente.png" alt="Polo Metal Frente" style="width: 100%; max-width: 320px; object-fit: contain; pointer-events: none;">
+                    </div>
+                    
+                    <!-- Vista Espalda -->
+                    <div style="min-width: 100%; display: flex; justify-content: center; align-items: center; padding: 10px; box-sizing: border-box;">
+                        <img src="polo-metal-espalda.png" alt="Polo Metal Espalda" style="width: 100%; max-width: 320px; object-fit: contain; pointer-events: none;">
+                    </div>
+
+                </div>
+            </a>
+            
+            <!-- PUNTOS DE NAVEGACIÓN (Se mantienen abajo y tienen z-index alto para que no los pise el enlace) -->
+            <div style="position: absolute; bottom: 15px; display: flex; gap: 8px; z-index: 10; left: 50%; transform: translateX(-50%);">
+                <span onclick="moverSliderMetal(0)" class="punto-m5" style="width: 10px; height: 10px; border-radius: 50%; background: #000; cursor: pointer; opacity: 1; transition: opacity 0.2s;"></span>
+                <span onclick="moverSliderMetal(1)" class="punto-m5" style="width: 10px; height: 10px; border-radius: 50%; background: #000; cursor: pointer; opacity: 0.4; transition: opacity 0.2s;"></span>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- SCRIPT LOGIC (Controla el movimiento del Frente y de la Espalda) -->
+<script>
+function moverSliderMetal(indice) {
+    const wrapper = document.querySelector('#slider-metal-p5 .wrapper-imagenes');
+    const puntos = document.querySelectorAll('#slider-metal-p5 .punto-m5');
+    
+    // Desplaza el contenedor de forma horizontal de acuerdo al índice (0 o 1)
+    wrapper.style.transform = `translateX(-${indice * 100}%)`;
+    
+    // Cambia visualmente el punto que está seleccionado
+    puntos.forEach((punto, i) => {
+        punto.style.opacity = (i === indice) ? '1' : '0.4';
+    });
+}
+</script>
     </div>
 </div>
 
