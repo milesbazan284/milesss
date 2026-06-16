@@ -985,95 +985,128 @@ function procesarCompraCrema() {
     
             <div class="product-card">
                 <div 
-                  <!-- COPIA TODO ESTE BLOQUE COMPLETO PARA REEMPLAZAR EL ESPACIO DE LA HEAVYWEIGHT T-SHIRT -->
-<div class="tarjeta-de-producto" style="background: #111; padding: 20px; border: 1px solid #222; border-radius: 8px; color: #fff; position: relative; box-sizing: border-box; font-family: 'Arial Black', Gadget, sans-serif; max-width: 100%; margin: 0 auto;">
-    <div style="display: flex; flex-direction: column; gap: 15px;">
+                 <!-- CONTENEDOR EN CUADRÍCULA PARA TODAS LAS GORRAS -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 100%; box-sizing: border-box; padding: 20px 0;">
 
-        <!-- CONTENEDOR DE LA GORRA (Fondo Blanco Puro - Solo Frente) -->
-        <div class="contenedor-slider-prenda" style="background: #ffffff; border-radius: 4px; position: relative; min-height: 350px; display: flex; justify-content: center; align-items: center;">
-            
-            <!-- Zona de clic para abrir la ventana de compra -->
-            <div onclick="abrirModalGorraP8()" style="display: flex; width: 100%; height: 100%; cursor: pointer; justify-content: center; align-items: center; padding: 10px; box-sizing: border-box;">
-                <img src="gorra-gris-frente.png" alt="Gorra Gris" style="width: 100%; max-width: 320px; object-fit: contain; pointer-events: none;">
+    <!-- ==================== GORRA 1 ==================== -->
+    <div class="tarjeta-de-producto" style="background: #111; padding: 20px; border: 1px solid #222; border-radius: 8px; color: #fff; position: relative; box-sizing: border-box; font-family: 'Arial Black', Gadget, sans-serif;">
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+
+            <!-- Contenedor Cuadrado Fijo -->
+            <div style="background: #ffffff; border-radius: 4px; position: relative; height: 320px; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+                <!-- Clic abre Modal 1 -->
+                <div onclick="abrirModalGorraP8()" style="display: flex; width: 100%; height: 100%; cursor: pointer; justify-content: center; align-items: center; padding: 15px; box-sizing: border-box;">
+                    <img src="gorra-gris-frente.png" alt="Gorra Gris" style="width: 100%; height: 100%; object-fit: contain; pointer-events: none;">
+                </div>
             </div>
 
+            <!-- Info Abajo -->
+            <div style="text-align: center; padding-top: 5px;">
+                <h3 style="margin: 0 0 5px 0; font-size: 16px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase;">
+                    GORRA 1
+                </h3>
+                <span style="font-size: 14px; color: #fff; font-weight: bold;">
+                    S/. 40.00
+                </span>
+            </div>
         </div>
-
-        <!-- INFORMACIÓN: GORRA 1 -->
-        <div style="text-align: center; padding-top: 5px;">
-            <h3 style="margin: 0 0 5px 0; font-size: 16px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; font-family: 'Arial Black', Gadget, sans-serif;">
-                GORRA 1
-            </h3>
-            <span style="font-size: 14px; color: #fff; font-weight: bold; font-family: 'Arial Black', Gadget, sans-serif;">
-                S/. 40.00
-            </span>
-        </div>
-
     </div>
+
+    <!-- ==================== GORRA 2 (PLANTILLA PARA MÁS GORRAS) ==================== -->
+    <div class="tarjeta-de-producto" style="background: #111; padding: 20px; border: 1px solid #222; border-radius: 8px; color: #fff; position: relative; box-sizing: border-box; font-family: 'Arial Black', Gadget, sans-serif;">
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+
+            <!-- Contenedor Cuadrado Fijo -->
+            <div style="background: #ffffff; border-radius: 4px; position: relative; height: 320px; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+                <!-- Clic abre Modal 2 -->
+                <div onclick="abrirModalGorraP9()" style="display: flex; width: 100%; height: 100%; cursor: pointer; justify-content: center; align-items: center; padding: 15px; box-sizing: border-box;">
+                    <img src="gorra-otra-frente.png" alt="Gorra 2" style="width: 100%; height: 100%; object-fit: contain; pointer-events: none;">
+                </div>
+            </div>
+
+            <!-- Info Abajo -->
+            <div style="text-align: center; padding-top: 5px;">
+                <h3 style="margin: 0 0 5px 0; font-size: 16px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase;">
+                    GORRA 2
+                </h3>
+                <span style="font-size: 14px; color: #fff; font-weight: bold;">
+                    S/. 40.00
+                </span>
+            </div>
+        </div>
+    </div>
+
 </div>
 
-<!-- VENTANA FLOTANTE DE COMPRA (MODAL) -->
+
+<!-- ==================== VENTANAS MODALES (AL FINAL DEL ARCHIVO) ==================== -->
+
+<!-- MODAL GORRA 1 -->
 <div id="modal-tallas-p8" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; font-family: 'Arial', sans-serif;">
     <div style="background: #0d0d0d; border: 1px solid #1a1a1a; padding: 30px 25px; border-radius: 12px; max-width: 440px; width: 100%; position: relative; color: #fff; box-sizing: border-box;">
-        
-        <!-- Botón de salida del cuadro -->
         <div onclick="cerrarModalGorraP8()" style="position: absolute; top: 15px; right: 20px; text-align: center; cursor: pointer; color: #888; font-size: 11px;">
             <span style="display: block; font-size: 18px; font-weight: bold; line-height: 10px;">&times;</span>
             <span style="font-family: Arial, sans-serif; font-size: 10px;">Cerrar</span>
         </div>
-        
-        <h2 style="margin: 15px 0 10px 0; font-size: 24px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; letter-spacing: 0.5px; text-align: center; line-height: 1.2; text-transform: uppercase;">
-            GORRA 1
-        </h2>
-        
-        <div style="font-size: 22px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; margin-bottom: 15px; text-align: left;">
-            S/. 40.00
-        </div>
-        
+        <h2 style="margin: 15px 0 10px 0; font-size: 24px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; text-align: center; text-transform: uppercase;">GORRA 1</h2>
+        <div style="font-size: 22px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; margin-bottom: 15px;">S/. 40.00</div>
         <hr style="border: 0; border-top: 1px solid #222; margin-bottom: 20px;">
-        
-        <p style="font-size: 14px; text-align: left; margin-bottom: 12px; font-family: Arial, sans-serif;">
-            <span style="color: #666;">Talla:</span> <span style="font-weight: bold; color: #fff;">Talla Única</span>
-        </p>
-        
-        <!-- Botón Talla Única Fijo -->
-        <div style="display: flex; gap: 10px; margin-bottom: 25px; text-align: left;">
-            <button style="background: #ffffff; color: #000000; border: 1px solid #fff; width: 55px; height: 38px; font-size: 14px; font-weight: bold; border-radius: 6px; cursor: default; font-family: 'Arial Black', Gadget, sans-serif;">T/U</button>
+        <p style="font-size: 14px; margin-bottom: 12px;"><span style="color: #666;">Talla:</span> <strong>Talla Única</strong></p>
+        <div style="display: flex; gap: 10px; margin-bottom: 25px;">
+            <button style="background: #ffffff; color: #000000; border: 1px solid #fff; width: 55px; height: 38px; font-weight: bold; border-radius: 6px; font-family: 'Arial Black', Gadget, sans-serif;">T/U</button>
         </div>
-
-        <!-- Botón Enlace directo a WhatsApp -->
-        <button onclick="enviarWhatsAppP8()" style="background: #ffffff; color: #000000; border: none; width: 100%; padding: 14px 0; font-size: 14px; font-weight: bold; font-family: 'Arial Black', Gadget, sans-serif; text-transform: uppercase; border-radius: 4px; cursor: pointer; letter-spacing: 0.5px;">
-            COMPRAR AHORA
-        </button>
+        <button onclick="enviarWhatsAppP8()" style="background: #ffffff; color: #000000; border: none; width: 100%; padding: 14px 0; font-size: 14px; font-weight: bold; font-family: 'Arial Black', Gadget, sans-serif; border-radius: 4px; cursor: pointer;">COMPRAR AHORA</button>
     </div>
 </div>
 
-<!-- CÓDIGO SCRIPT DE FUNCIONAMIENTO -->
+<!-- MODAL GORRA 2 -->
+<div id="modal-tallas-p9" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; font-family: 'Arial', sans-serif;">
+    <div style="background: #0d0d0d; border: 1px solid #1a1a1a; padding: 30px 25px; border-radius: 12px; max-width: 440px; width: 100%; position: relative; color: #fff; box-sizing: border-box;">
+        <div onclick="cerrarModalGorraP9()" style="position: absolute; top: 15px; right: 20px; text-align: center; cursor: pointer; color: #888; font-size: 11px;">
+            <span style="display: block; font-size: 18px; font-weight: bold; line-height: 10px;">&times;</span>
+            <span style="font-family: Arial, sans-serif; font-size: 10px;">Cerrar</span>
+        </div>
+        <h2 style="margin: 15px 0 10px 0; font-size: 24px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; text-align: center; text-transform: uppercase;">GORRA 2</h2>
+        <div style="font-size: 22px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; margin-bottom: 15px;">S/. 40.00</div>
+        <hr style="border: 0; border-top: 1px solid #222; margin-bottom: 20px;">
+        <p style="font-size: 14px; margin-bottom: 12px;"><span style="color: #666;">Talla:</span> <strong>Talla Única</strong></p>
+        <div style="display: flex; gap: 10px; margin-bottom: 25px;">
+            <button style="background: #ffffff; color: #000000; border: 1px solid #fff; width: 55px; height: 38px; font-weight: bold; border-radius: 6px; font-family: 'Arial Black', Gadget, sans-serif;">T/U</button>
+        </div>
+        <button onclick="enviarWhatsAppP9()" style="background: #ffffff; color: #000000; border: none; width: 100%; padding: 14px 0; font-size: 14px; font-weight: bold; font-family: 'Arial Black', Gadget, sans-serif; border-radius: 4px; cursor: pointer;">COMPRAR AHORA</button>
+    </div>
+</div>
+
+
+<!-- ==================== SCRIPTS DE CONTROL JAVASCRIPT ==================== -->
 <script>
-function abrirModalGorraP8() {
-    document.getElementById('modal-tallas-p8').style.display = 'flex';
-}
-
-function cerrarModalGorraP8() {
-    document.getElementById('modal-tallas-p8').style.display = 'none';
-}
-
+// Funciones Gorra 1
+function abrirModalGorraP8() { document.getElementById('modal-tallas-p8').style.display = 'flex'; }
+// Cambiado para que no interfiera con funciones globales previas
+function cerrarModalGorraP8() { document.getElementById('modal-tallas-p8').style.display = 'none'; }
 function enviarWhatsAppP8() {
     const numero = "51949776995";
     const mensaje = `¡Hola! Me interesa comprar la GORRA 1.\n*Talla:* T/U *Precio:* S/. 40.00 ¿Tienen stock disponible?`;
-    
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, '_blank');
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, '_blank');
     cerrarModalGorraP8();
 }
 
+// Funciones Gorra 2
+function abrirModalGorraP9() { document.getElementById('modal-tallas-p9').style.display = 'flex'; }
+function cerrarModalGorraP9() { document.getElementById('modal-tallas-p9').style.display = 'none'; }
+function enviarWhatsAppP9() {
+    const numero = "51949776995";
+    const mensaje = `¡Hola! Me interesa comprar la GORRA 2.\n*Talla:* T/U *Precio:* S/. 40.00 ¿Tienen stock disponible?`;
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, '_blank');
+    cerrarModalGorraP9();
+}
+
+// Cerrar haciendo clic afuera
 window.addEventListener('click', function(event) {
-    const modal = document.getElementById('modal-tallas-p8');
-    if (event.target == modal) {
-        cerrarModalGorraP8();
-    }
+    if (event.target == document.getElementById('modal-tallas-p8')) { cerrarModalGorraP8(); }
+    if (event.target == document.getElementById('modal-tallas-p9')) { cerrarModalGorraP9(); }
 });
-</script>  
+</script>
             </div>
             <div class="product-card">
                 <div class="product-img">Custom Cap (Próximamente)</div>
