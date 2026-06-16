@@ -313,47 +313,6 @@
         </div>
     </div>
 
-function cambiarFotoPrenda(punto, index) {
-    let contenedorPuntos = punto.parentElement;
-    let contenedorSlider = contenedorPuntos.parentElement;
-    let wrapper = contenedorSlider.querySelector('.wrapper-imagenes');
-    
-    // Mueve la imagen a la izquierda o derecha
-    wrapper.style.transform = `translateX(-${index * 100}%)`;
-    
-    // Cambia la opacidad del puntito activo
-    contenedorPuntos.querySelectorAll('.punto-indicador').forEach((p, idx) => {
-        p.style.opacity = (idx === index) ? "1" : "0.3";
-    });
-}
-
-// Activa el soporte para deslizar con el dedo en celulares
-document.querySelectorAll('.contenedor-slider-prenda').forEach(slider => {
-    let startX = 0;
-    let currentIdx = 0;
-    let wrapper = slider.querySelector('.wrapper-imagenes');
-    let puntos = slider.querySelectorAll('.punto-indicador');
-
-    slider.addEventListener('touchstart', e => {
-        startX = e.touches[0].clientX;
-    }, {passive: true});
-
-    slider.addEventListener('touchend', e => {
-        let endX = e.changedTouches[0].clientX;
-        let diffX = startX - endX;
-
-        if (diffX > 50 && currentIdx === 0) {
-            currentIdx = 1; // Pasa a la espalda
-        } else if (diffX < -50 && currentIdx === 1) {
-            currentIdx = 0; // Vuelve al frente
-        }
-        
-        wrapper.style.transform = `translateX(-${currentIdx * 100}%)`;
-        puntos.forEach((p, idx) => {
-            p.style.opacity = (idx === currentIdx) ? "1" : "0.3";
-        });
-    }, {passive: true});
-});
 
 <!-- ==========================================
      SISTEMA JAVASCRIPT GLOBAL (MOTOR DE LA WEB)
