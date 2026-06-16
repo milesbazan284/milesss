@@ -331,7 +331,58 @@ function procesarCompra() {
         
     </div>
 </div>
+PRODUCTO 3: POLO CREMA
+         ========================================== -->
+    <div class="tarjeta-de-producto" style="background: #111; padding: 15px; border: 1px solid #222; border-radius: 8px; color: #fff; position: relative; display: flex; flex-direction: column; width: 100%; box-sizing: border-box;">
+        <div class="vista-foto" onclick="abrirDetalles(this)" style="background: #f4efe6; padding: 15px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 300px; box-sizing: border-box;">
+            <img src="polo-crema.png" alt="Polo MILES DREAMS Crema" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
+        <div class="informacion-interna" style="display: none; flex-direction: column; justify-content: center; position: relative; height: 300px; box-sizing: border-box;">
+            <div onclick="cerrarDetalles(this)" style="position: absolute; top: 0; right: 0; text-align: center; cursor: pointer; color: #aaa; z-index: 10;">
+                <span style="font-size: 24px; font-weight: bold; display: block; line-height: 20px;">&times;</span>
+                <span style="font-size: 0.65rem; display: block;">Cerrar</span>
+            </div>
+            <h2 class="nombre-prod" style="font-size: 1.1rem; margin: 20px 25px 5px 0; text-transform: uppercase; line-height: 1.2;">Prenda 3 - Crema</h2>
+            <p class="precio-prod" style="font-size: 1.15rem; font-weight: bold; margin: 5px 0;">S/. 50.00</p>
+            <hr style="border: 0; border-top: 1px solid #333; margin: 10px 0;">
+            <p style="margin-bottom: 8px; font-size: 0.8rem; color: #aaa;">Talla: <span class="talla-texto" style="color: #fff; font-weight: bold;">Selecciona Talla</span></p>
+            <div style="display: flex; gap: 6px; margin-bottom: 15px;">
+                <span onclick="marcarTalla(this)" class="btn-talla" style="border: 1px solid #fff; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-weight: bold; font-size: 0.8rem;">S</span>
+                <span onclick="marcarTalla(this)" class="btn-talla" style="border: 1px solid #fff; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-weight: bold; font-size: 0.8rem;">M</span>
+                <span onclick="marcarTalla(this)" class="btn-talla" style="border: 1px solid #fff; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-weight: bold; font-size: 0.8rem;">L</span>
+                <span onclick="marcarTalla(this)" class="btn-talla" style="border: 1px solid #fff; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-weight: bold; font-size: 0.8rem;">XL</span>
+            </div>
+            <button onclick="enviarPedido(this)" style="background: #fff; color: #000; border: none; padding: 10px; font-size: 0.85rem; font-weight: bold; border-radius: 4px; cursor: pointer; text-transform: uppercase; width: 100%;">Comprar ahora</button>
+        </div>
+    </div>
 
+    <!-- ==========================================
+         PRODUCTO 4: POLO AZUL MARINO
+         ========================================== -->
+    <div class="tarjeta-de-producto" style="background: #111; padding: 15px; border: 1px solid #222; border-radius: 8px; color: #fff; position: relative; display: flex; flex-direction: column; width: 100%; box-sizing: border-box;">
+        <div class="vista-foto" onclick="abrirDetalles(this)" style="background: #1c2434; padding: 15px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 300px; box-sizing: border-box;">
+            <img src="polo-azul.png" alt="Polo MILES DREAMS Azul Marino" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
+        <div class="informacion-interna" style="display: none; flex-direction: column; justify-content: center; position: relative; height: 300px; box-sizing: border-box;">
+            <div onclick="cerrarDetalles(this)" style="position: absolute; top: 0; right: 0; text-align: center; cursor: pointer; color: #aaa; z-index: 10;">
+                <span style="font-size: 24px; font-weight: bold; display: block; line-height: 20px;">&times;</span>
+                <span style="font-size: 0.65rem; display: block;">Cerrar</span>
+            </div>
+            <h2 class="nombre-prod" style="font-size: 1.1rem; margin: 20px 25px 5px 0; text-transform: uppercase; line-height: 1.2;">Prenda 4 - Azul Marino</h2>
+            <p class="precio-prod" style="font-size: 1.15rem; font-weight: bold; margin: 5px 0;">S/. 50.00</p>
+            <hr style="border: 0; border-top: 1px solid #333; margin: 10px 0;">
+            <p style="margin-bottom: 8px; font-size: 0.8rem; color: #aaa;">Talla: <span class="talla-texto" style="color: #fff; font-weight: bold;">Selecciona Talla</span></p>
+            <div style="display: flex; gap: 6px; margin-bottom: 15px;">
+                <span onclick="marcarTalla(this)" class="btn-talla" style="border: 1px solid #fff; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-weight: bold; font-size: 0.8rem;">S</span>
+                <span onclick="marcarTalla(this)" class="btn-talla" style="border: 1px solid #fff; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-weight: bold; font-size: 0.8rem;">M</span>
+                <span onclick="marcarTalla(this)" class="btn-talla" style="border: 1px solid #fff; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-weight: bold; font-size: 0.8rem;">L</span>
+                <span onclick="marcarTalla(this)" class="btn-talla" style="border: 1px solid #fff; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-weight: bold; font-size: 0.8rem;">XL</span>
+            </div>
+            <button onclick="enviarPedido(this)" style="background: #fff; color: #000; border: none; padding: 10px; font-size: 0.85rem; font-weight: bold; border-radius: 4px; cursor: pointer; text-transform: uppercase; width: 100%;">Comprar ahora</button>
+        </div>
+    </div>
+
+</div>
 <script>
 let tallaSeleccionadaBlanco = "";
 
