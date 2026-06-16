@@ -447,6 +447,126 @@ window.addEventListener('click', function(event) {
     }
 });
 </script>
+    <!-- TARJETA DE PRODUCTO MILES - PRENDA CREMA -->
+<div class="tarjeta-de-producto" style="background: #111; padding: 20px; border: 1px solid #222; border-radius: 8px; color: #fff; position: relative; box-sizing: border-box; font-family: 'Arial Black', Gadget, sans-serif;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+
+        <!-- CONTENEDOR DEL SLIDER -->
+        <div class="contenedor-slider-prenda" id="slider-metal-p6" style="background: #ffffff; border-radius: 4px; position: relative; min-height: 350px; display: flex; overflow: hidden; justify-content: center; align-items: center;">
+            
+            <div onclick="abrirModalTallasP6()" style="display: flex; width: 100%; height: 100%; cursor: pointer;">
+                <div class="wrapper-imagenes" id="wrapper-p6" style="display: flex; width: 100%; transition: transform 0.3s ease-in-out;">
+                    <!-- Frente -->
+                    <div style="min-width: 100%; display: flex; justify-content: center; align-items: center; padding: 10px; box-sizing: border-box;">
+                        <img src="polo-crema-frente.png" alt="Polo Crema Frente" style="width: 100%; max-width: 320px; object-fit: contain; pointer-events: none;">
+                    </div>
+                    <!-- Espalda -->
+                    <div style="min-width: 100%; display: flex; justify-content: center; align-items: center; padding: 10px; box-sizing: border-box;">
+                        <img src="polo-crema-espalda.png" alt="Polo Crema Espalda" style="width: 100%; max-width: 320px; object-fit: contain; pointer-events: none;">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PUNTOS -->
+            <div style="position: absolute; bottom: 15px; display: flex; gap: 8px; z-index: 10; left: 50%; transform: translateX(-50%);">
+                <span onclick="event.stopPropagation(); moverSliderP6(0)" class="punto-m6" style="width: 10px; height: 10px; border-radius: 50%; background: #000; cursor: pointer; opacity: 1;"></span>
+                <span onclick="event.stopPropagation(); moverSliderP6(1)" class="punto-m6" style="width: 10px; height: 10px; border-radius: 50%; background: #000; cursor: pointer; opacity: 0.4;"></span>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- MODAL PRENDA 6 - CREMA -->
+<div id="modal-tallas-p6" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; font-family: 'Arial', sans-serif;">
+    <div style="background: #0d0d0d; border: 1px solid #1a1a1a; padding: 30px 25px; border-radius: 12px; max-width: 440px; width: 100%; position: relative; color: #fff; box-sizing: border-box;">
+        
+        <div onclick="cerrarModalTallasP6()" style="position: absolute; top: 15px; right: 20px; text-align: center; cursor: pointer; color: #888; font-size: 11px;">
+            <span style="display: block; font-size: 18px; font-weight: bold; line-height: 10px;">&times;</span>
+            <span style="font-family: Arial, sans-serif; font-size: 10px;">Cerrar</span>
+        </div>
+        
+        <h2 style="margin: 15px 0 10px 0; font-size: 24px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; letter-spacing: 0.5px; text-align: center; line-height: 1.2; text-transform: uppercase;">
+            PRENDA 6 - CREMA
+        </h2>
+        
+        <div style="font-size: 22px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; margin-bottom: 15px; text-align: left;">
+            S/. 50.00
+        </div>
+        
+        <hr style="border: 0; border-top: 1px solid #222; margin-bottom: 20px;">
+        
+        <p style="font-size: 14px; text-align: left; margin-bottom: 12px; font-family: Arial, sans-serif;">
+            <span style="color: #666;">Talla:</span> <span id="talla-seleccionada-texto-p6" style="font-weight: bold; color: #fff;">Selecciona Talla</span>
+        </p>
+        
+        <div style="display: flex; gap: 10px; margin-bottom: 25px; text-align: left;">
+            <button onclick="seleccionarTallaP6('S')" class="btn-talla-p6" style="background: transparent; color: #fff; border: 1px solid #fff; width: 48px; height: 38px; font-size: 15px; font-weight: bold; border-radius: 6px; cursor: pointer; font-family: 'Arial Black', Gadget, sans-serif;">S</button>
+            <button onclick="seleccionarTallaP6('M')" class="btn-talla-p6" style="background: transparent; color: #fff; border: 1px solid #fff; width: 48px; height: 38px; font-size: 15px; font-weight: bold; border-radius: 6px; cursor: pointer; font-family: 'Arial Black', Gadget, sans-serif;">M</button>
+            <button onclick="seleccionarTallaP6('L')" class="btn-talla-p6" style="background: transparent; color: #fff; border: 1px solid #fff; width: 48px; height: 38px; font-size: 15px; font-weight: bold; border-radius: 6px; cursor: pointer; font-family: 'Arial Black', Gadget, sans-serif;">L</button>
+            <button onclick="seleccionarTallaP6('XL')" class="btn-talla-p6" style="background: transparent; color: #fff; border: 1px solid #fff; width: 48px; height: 38px; font-size: 15px; font-weight: bold; border-radius: 6px; cursor: pointer; font-family: 'Arial Black', Gadget, sans-serif;">XL</button>
+        </div>
+
+        <button onclick="enviarWhatsAppP6()" style="background: #ffffff; color: #000000; border: none; width: 100%; padding: 14px 0; font-size: 14px; font-weight: bold; font-family: 'Arial Black', Gadget, sans-serif; text-transform: uppercase; border-radius: 4px; cursor: pointer; letter-spacing: 0.5px;">
+            COMPRAR AHORA
+        </button>
+    </div>
+</div>
+
+<script>
+let tallaSeleccionadaP6 = "";
+
+function moverSliderP6(indice) {
+    const wrapper = document.getElementById('wrapper-p6');
+    const puntos = document.querySelectorAll('#slider-metal-p6 .punto-m6');
+    wrapper.style.transform = `translateX(-${indice * 100}%)`;
+    puntos.forEach((punto, i) => {
+        punto.style.opacity = (i === indice) ? '1' : '0.4';
+    });
+}
+
+function abrirModalTallasP6() {
+    document.getElementById('modal-tallas-p6').style.display = 'flex';
+}
+
+function cerrarModalTallasP6() {
+    document.getElementById('modal-tallas-p6').style.display = 'none';
+}
+
+function seleccionarTallaP6(talla) {
+    tallaSeleccionadaP6 = talla;
+    document.getElementById('talla-seleccionada-texto-p6').innerText = talla;
+    
+    const botones = document.querySelectorAll('.btn-talla-p6');
+    botones.forEach(btn => {
+        if(btn.innerText === talla) {
+            btn.style.background = "#ffffff";
+            btn.style.color = "#000000";
+        } else {
+            btn.style.background = "transparent";
+            btn.style.color = "#ffffff";
+        }
+    });
+}
+
+function enviarWhatsAppP6() {
+    if (tallaSeleccionadaP6 === "") {
+        alert("Por favor, selecciona una talla antes de comprar.");
+        return;
+    }
+    const numero = "51949776995";
+    const mensaje = `¡Hola! Me interesa comprar la PRENDA 6 - CREMA.\n*Talla:* ${tallaSeleccionadaP6} *Precio:* S/. 50.00 ¿Tienen stock disponible?`;
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+    cerrarModalTallasP6();
+}
+
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('modal-tallas-p6');
+    if (event.target == modal) { cerrarModalTallasP6(); }
+});
+</script>
     </div>
 </div>
 
