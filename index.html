@@ -1039,7 +1039,32 @@ function procesarCompraCrema() {
     </div>
 </div>
 
+<!--  MODAL GORRA 2 (ROJA) --> 
+<div id="modal-tallas-p9" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; justify-content: center; align-items: center;">
+    <div style="background: #0d0d0d; border: 1px solid #1a1a1a; padding: 30px 25px; border-radius: 12px; max-width: 440px; width: 100%; position: relative; color: #fff;">
+        <div onclick="cerrarModalGorraP9()" style="position: absolute; top: 15px; right: 20px; text-align: center; cursor: pointer; color: #888; font-size: 11px;">
+            <span style="display: block; font-size: 18px; font-weight: bold; line-height: 10px;">&times;</span>
+            <span style="font-family: Arial, sans-serif; font-size: 10px;">Cerrar</span>
+        </div>
 
+        <!-- Nombre y Precio se muestran juntos aquí -->
+        <h2 style="margin: 15px 0 10px 0; font-size: 24px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; text-align: center; text-transform: uppercase;">Gorra Roja</h2>
+        <div style="font-size: 22px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; margin-bottom: 15px; text-align: center;">S/. 40.00</div>
+
+        <hr style="border: 0; border-top: 1px solid #222; margin-bottom: 20px;">
+        <p style="font-size: 14px; margin-bottom: 12px;"><span style="color: #666;">Talla:</span> <strong>Talla Única</strong></p>
+        
+        <!-- Botón de selección visual de la Talla -->
+        <div style="display: flex; gap: 10px; margin-bottom: 25px;">
+            <button style="background: #ffffff; color: #000000; border: 1px solid #fff; width: 55px; height: 38px; font-weight: bold; border-radius: 6px; font-family: Arial, sans-serif; font-size: 12px; cursor: default;">U</button>
+        </div>
+
+        <!-- Botón para finalizar compra vía WhatsApp -->
+        <button onclick="enviarWhatsAppP9()" style="background: #ffffff; color: #000000; border: none; width: 100%; padding: 14px 0; font-size: 14px; font-weight: bold; border-radius: 6px; font-family: Arial, sans-serif; cursor: pointer; text-transform: uppercase;">
+            Finalizar Compra
+        </button>
+    </div>
+</div>
 
 
 <!-- ==================== SCRIPTS DE CONTROL JAVASCRIPT ==================== -->
