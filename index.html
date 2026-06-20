@@ -1078,14 +1078,6 @@ function enviarWhatsAppP8() {
     window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, '_blank');
     cerrarModalGorraP8();
 }
-
-// Cerrar haciendo clic afuera
-window.addEventListener('click', function(event) {
-    if (event.target == document.getElementById('modal-tallas-p8')) { cerrarModalGorraP8(); }
-    if (event.target == document.getElementById('modal-tallas-p9')) { cerrarModalGorraP9(); }
-});
-</script>
-   
 // Funciones Gorra Roja y Blanco (Gorra Miles)
 function abrirModalGorraP9() { document.getElementById('modal-tallas-p9').style.display = 'flex'; }
 function cerrarModalGorraP9() { document.getElementById('modal-tallas-p9').style.display = 'none'; }
@@ -1095,6 +1087,16 @@ function enviarWhatsAppP9() {
     window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, '_blank');
     cerrarModalGorraP9();
 }
+
+// Cerrar haciendo clic afuera
+window.addEventListener('click', function(event) {
+    if (event.target == document.getElementById('modal-tallas-p8')) { cerrarModalGorraP8(); }
+    if (event.target == document.getElementById('modal-tallas-p9')) { cerrarModalGorraP9(); }
+});
+</script>
+
+</script>
+   
    
             </div>
             <div class="product-card">
