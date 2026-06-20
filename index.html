@@ -1066,18 +1066,23 @@ function procesarCompraCrema() {
     </div>
 </div>
 
-
 <!-- ==================== SCRIPTS DE CONTROL JAVASCRIPT ==================== -->
 <script>
 // Funciones Gorra Gris (Gorra Miles)
-function abrirModalGorraP8() { document.getElementById('modal-tallas-p8').style.display = 'flex'; }
-function cerrarModalGorraP8() { document.getElementById('modal-tallas-p8').style.display = 'none'; }
+function abrirModalGorraP8() { 
+    document.getElementById('modal-tallas-p8').style.display = 'flex'; 
+}
+function cerrarModalGorraP8() { 
+    document.getElementById('modal-tallas-p8').style.display = 'none'; 
+}
 function enviarWhatsAppP8() {
     const numero = "51949776995";
     const mensaje = `¡Hola! Me interesa comprar la GORRA MILES.\n*Talla:* T/U *Precio:* S/. 40.00 ¿Tienen stock disponible?`;
     window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, '_blank');
     cerrarModalGorraP8();
-} // Funciones Gorra Roja y Blanco (Gorra Miles)
+}
+
+// Funciones Gorra Roja y Blanco (Gorra Miles)
 function abrirModalGorraP9() { 
     document.getElementById('modal-tallas-p9').style.display = 'flex'; 
 }
@@ -1089,10 +1094,15 @@ function enviarWhatsAppP9() {
     const mensaje = `¡Hola! Me interesa comprar la GORRA MILES ROJA/BLANCO.\n*Talla:* T/U *Precio:* S/. 40.00 ¿Tienen stock disponible?`;
     window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, '_blank');
     cerrarModalGorraP9();
-// Cerrar haciendo clic afuera
+}
+
+// Cerrar haciendo clic afuera de los modales
 window.addEventListener('click', function(event) {
-    if (event.target == document.getElementById('modal-tallas-p8')) { cerrarModalGorraP8(); }
-    if (event.target == document.getElementById('modal-tallas-p9')) { cerrarModalGorraP9(); }
+    const modalP8 = document.getElementById('modal-tallas-p8');
+    const modalP9 = document.getElementById('modal-tallas-p9');
+    
+    if (modalP8 && event.target == modalP8) { cerrarModalGorraP8(); }
+    if (modalP9 && event.target == modalP9) { cerrarModalGorraP9(); }
 });
 </script>
 
