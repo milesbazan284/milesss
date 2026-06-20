@@ -1086,7 +1086,15 @@ window.addEventListener('click', function(event) {
 });
 </script>
    
-
+// Funciones Gorra Roja y Blanco (Gorra Miles)
+function abrirModalGorraP9() { document.getElementById('modal-tallas-p9').style.display = 'flex'; }
+function cerrarModalGorraP9() { document.getElementById('modal-tallas-p9').style.display = 'none'; }
+function enviarWhatsAppP9() {
+    const numero = "51949776995";
+    const mensaje = `¡Hola! Me interesa comprar la GORRA MILES ROJA/BLANCO.\n*Talla:* T/U *Precio:* S/. 40.00 ¿Tienen stock disponible?`;
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, '_blank');
+    cerrarModalGorraP9();
+}
    
             </div>
             <div class="product-card">
