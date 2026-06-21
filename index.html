@@ -387,6 +387,39 @@
         </button>
     </div>
 </div>
+<!-- TARJETA DE PRODUCTO MILES - PRENDA AZUL -->
+<div class="tarjeta-de-producto" style="background: #111; padding: 20px; border: 1px solid #222; border-radius: 8px; color: #fff; position: relative; box-sizing: border-box; font-family: 'Arial Black', Gadget, sans-serif;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+
+        <!-- CONTENEDOR DEL SLIDER -->
+        <div class="contenedor-slider-prenda" id="slider-metal-p7" style="background: #ffffff; border-radius: 4px; position: relative; min-height: 350px; display: flex; overflow: hidden; justify-content: center; align-items: center;">
+            
+            <div onclick="abrirModalTallasP6()" style="display: flex; width: 100%; height: 100%; cursor: pointer;">
+                <div class="wrapper-imagenes" id="wrapper-p7" style="display: flex; width: 100%; transition: transform 0.3s ease-in-out;">
+                    <!-- Frente -->
+                    <div style="min-width: 100%; display: flex; justify-content: center; align-items: center; padding: 10px; box-sizing: border-box;">
+                        <img src="polo-azul-frente.png" alt="Polo Azul Frente" style="width: 100%; max-width: 320px; object-fit: contain; pointer-events: none;">
+                    </div>
+                    <!-- Espalda -->
+                    <div style="min-width: 100%; display: flex; justify-content: center; align-items: center; padding: 10px; box-sizing: border-box;">
+                        <img src="polo-azul-espalda.png" alt="Polo Azul Espalda" style="width: 100%; max-width: 320px; object-fit: contain; pointer-events: none;">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PUNTOS -->
+            <div style="position: absolute; bottom: 15px; display: flex; gap: 8px; z-index: 10; left: 50%; transform: translateX(-50%);">
+                <span onclick="event.stopPropagation(); moverSliderP6(0)" class="punto-m7" style="width: 10px; height: 10px; border-radius: 50%; background: #000; cursor: pointer; opacity: 1;"></span>
+                <span onclick="event.stopPropagation(); moverSliderP6(1)" class="punto-m7" style="width: 10px; height: 10px; border-radius: 50%; background: #000; cursor: pointer; opacity: 0.4;"></span>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
 
 <!-- LÓGICA JAVASCRIPT INDEPENDIENTE -->
 <script>
@@ -481,36 +514,6 @@ window.addEventListener('click', function(event) {
         <button onclick="enviarWhatsAppP6()" style="background: #ffffff; color: #000000; border: none; width: 100%; padding: 14px 0; font-size: 14px; font-weight: bold; font-family: 'Arial Black', Gadget, sans-serif; text-transform: uppercase; border-radius: 4px; cursor: pointer; letter-spacing: 0.5px;">
             COMPRAR AHORA
         </button>
-   <!-- TARJETA DE PRODUCTO MILES - PRENDA AZUL -->
-<div class="tarjeta-de-producto" style="background: #111; padding: 20px; border: 1px solid #222; border-radius: 8px; color: #fff; position: relative; box-sizing: border-box; font-family: 'Arial Black', Gadget, sans-serif;">
-    <div style="display: flex; flex-direction: column; gap: 20px;">
-
-        <!-- CONTENEDOR DEL SLIDER -->
-        <div class="contenedor-slider-prenda" id="slider-metal-p7" style="background: #ffffff; border-radius: 4px; position: relative; min-height: 350px; display: flex; overflow: hidden; justify-content: center; align-items: center;">
-            
-            <div onclick="abrirModalTallasP6()" style="display: flex; width: 100%; height: 100%; cursor: pointer;">
-                <div class="wrapper-imagenes" id="wrapper-p7" style="display: flex; width: 100%; transition: transform 0.3s ease-in-out;">
-                    <!-- Frente -->
-                    <div style="min-width: 100%; display: flex; justify-content: center; align-items: center; padding: 10px; box-sizing: border-box;">
-                        <img src="polo-azul-frente.png" alt="Polo Azul Frente" style="width: 100%; max-width: 320px; object-fit: contain; pointer-events: none;">
-                    </div>
-                    <!-- Espalda -->
-                    <div style="min-width: 100%; display: flex; justify-content: center; align-items: center; padding: 10px; box-sizing: border-box;">
-                        <img src="polo-azul-espalda.png" alt="Polo Azul Espalda" style="width: 100%; max-width: 320px; object-fit: contain; pointer-events: none;">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- PUNTOS -->
-            <div style="position: absolute; bottom: 15px; display: flex; gap: 8px; z-index: 10; left: 50%; transform: translateX(-50%);">
-                <span onclick="event.stopPropagation(); moverSliderP6(0)" class="punto-m7" style="width: 10px; height: 10px; border-radius: 50%; background: #000; cursor: pointer; opacity: 1;"></span>
-                <span onclick="event.stopPropagation(); moverSliderP6(1)" class="punto-m7" style="width: 10px; height: 10px; border-radius: 50%; background: #000; cursor: pointer; opacity: 0.4;"></span>
-            </div>
-
-        </div>
-
-    </div>
-</div>
 
     </div>
 </div>
@@ -519,8 +522,8 @@ window.addEventListener('click', function(event) {
 let tallaSeleccionadaP6 = "";
 
 function moverSliderP6(indice) {
-    const wrapper = document.getElementById('wrapper-p6');
-    const puntos = document.querySelectorAll('#slider-metal-p6 .punto-m6');
+    const wrapper = document.getElementById('wrapper-p7');
+    const puntos = document.querySelectorAll('#slider-metal-p6 .punto-m7');
     wrapper.style.transform = `translateX(-${indice * 100}%)`;
     puntos.forEach((punto, i) => {
         punto.style.opacity = (i === indice) ? '1' : '0.4';
@@ -537,7 +540,7 @@ function cerrarModalTallasP6() {
 }
 
 function seleccionarTallaP6(talla) {
-    tallaSeleccionadaP7 = talla;
+    tallaSeleccionadaP6 = talla;
     document.getElementById('talla-seleccionada-texto-p6').innerText = talla;
     
     const botones = document.querySelectorAll('.btn-talla-p6');
