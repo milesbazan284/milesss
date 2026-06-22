@@ -897,88 +897,81 @@ function procesarCompraCrema() {
     </div>
 
 <!-- ==================== VENTANAS MODALES (AL FINAL DEL ARCHIVO) ==================== -->
-
-<!-- MODAL GORRA 1 (GRIS) --> 
 <div id="modal-tallas-p8" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; justify-content: center; align-items: center;">
-    <div style="background: #0d0d0d; border: 1px solid #1a1a1a; padding: 30px 25px; border-radius: 12px; max-width: 440px; width: 100%; position: relative; color: #fff;">
-        <div onclick="cerrarModalGorraP7()" style="position: absolute; top: 15px; right: 20px; text-align: center; cursor: pointer; color: #888; font-size: 11px;">
-            <span style="display: block; font-size: 18px; font-weight: bold; line-height: 10px;">&times;</span>
-            <span style="font-family: Arial, sans-serif; font-size: 10px;">Cerrar</span>
-        </div>
-        <h2 style="margin: 15px 0 10px 0; font-size: 24px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; text-align: center; text-transform: uppercase;">GORRA MILES GRIS</h2>
-        <div style="font-size: 22px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; margin-bottom: 15px; text-align: center;">S/. 40.00</div>
-        <hr style="border: 0; border-top: 1px solid #222; margin-bottom: 20px;">
-        <p style="font-size: 14px; margin-bottom: 12px;"><span style="color: #666;">Talla:</span> <strong>Talla Única</strong></p>
-        <div style="display: flex; gap: 10px; margin-bottom: 25px;">
-            <button style="background: #ffffff; color: #000000; border: 1px solid #fff; width: 55px; height: 38px; font-weight: bold; border-radius: 6px; font-family: Arial, sans-serif; font-size: 12px; cursor: default;">U</button>
-        </div>
-        <button onclick="enviarWhatsAppP7()" style="background: #ffffff; color: #000000; border: none; width: 100%; padding: 14px 0; font-size: 14px; font-weight: bold; border-radius: 6px; font-family: Arial, sans-serif; cursor: pointer; text-transform: uppercase;">Finalizar Compra</button>
-    </div>
-</div>
-
-<!-- MODAL GORRA 2 (ROJA/BLANCO) --> 
-<div id="modal-tallas-p9" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; justify-content: center; align-items: center;">
-    <div style="background: #0d0d0d; border: 1px solid #1a1a1a; padding: 30px 25px; border-radius: 12px; max-width: 440px; width: 100%; position: relative; color: #fff;">
+    <div style="background: #0d0d0d; border: 1px solid #1a1a1a; padding: 30px 25px; border-radius: 12px; max-width: 444px; width: 100%; position: relative; color: #fff;">
         <div onclick="cerrarModalGorraP8()" style="position: absolute; top: 15px; right: 20px; text-align: center; cursor: pointer; color: #888; font-size: 11px;">
             <span style="display: block; font-size: 18px; font-weight: bold; line-height: 10px;">&times;</span>
             <span style="font-family: Arial, sans-serif; font-size: 10px;">Cerrar</span>
         </div>
-        <h2 style="margin: 15px 0 10px 0; font-size: 24px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; text-align: center; text-transform: uppercase;">GORRA MILES</h2>
+        <h2 style="margin: 15px 0 10px 0; font-size: 24px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; text-align: center; text-transform: uppercase;">Gorra Gris</h2>
         <div style="font-size: 22px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; margin-bottom: 15px; text-align: center;">S/. 40.00</div>
         <hr style="border: 0; border-top: 1px solid #222; margin-bottom: 20px;">
         <p style="font-size: 14px; margin-bottom: 12px;"><span style="color: #666;">Talla:</span> <strong>Talla Única</strong></p>
         <div style="display: flex; gap: 10px; margin-bottom: 25px;">
-            <button style="background: #ffffff; color: #000000; border: 1px solid #fff; width: 55px; height: 38px; font-weight: bold; border-radius: 6px; font-family: Arial, sans-serif; font-size: 12px; cursor: default;">U</button>
+            <button style="background: #ffffff; color: #000000; border: 1px solid #fff; width: 55px; height: 38px; font-weight: bold; border-radius: 6px;">T/U</button>
         </div>
-        <button onclick="enviarWhatsAppP8()" style="background: #ffffff; color: #000000; border: none; width: 100%; padding: 14px 0; font-size: 14px; font-weight: bold; border-radius: 6px; font-family: Arial, sans-serif; cursor: pointer; text-transform: uppercase;">Finalizar Compra</button>
+        <button onclick="enviarWhatsAppP8(event)" style="background: #ffffff; color: #000000; border: none; width: 100%; padding: 14px 0; font-size: 14px; font-weight: bold; border-radius: 6px; cursor: pointer;">Comprar</button>
     </div>
 </div>
 
+<div id="modal-tallas-p9" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; justify-content: center; align-items: center;">
+    <div style="background: #0d0d0d; border: 1px solid #1a1a1a; padding: 30px 25px; border-radius: 12px; max-width: 444px; width: 100%; position: relative; color: #fff;">
+        <div onclick="cerrarModalGorraP9()" style="position: absolute; top: 15px; right: 20px; text-align: center; cursor: pointer; color: #888; font-size: 11px;">
+            <span style="display: block; font-size: 18px; font-weight: bold; line-height: 10px;">&times;</span>
+            <span style="font-family: Arial, sans-serif; font-size: 10px;">Cerrar</span>
+        </div>
+        <h2 style="margin: 15px 0 10px 0; font-size: 24px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; text-align: center; text-transform: uppercase;">Gorra Roja/Blanco</h2>
+        <div style="font-size: 22px; font-family: 'Arial Black', Gadget, sans-serif; font-weight: 900; margin-bottom: 15px; text-align: center;">S/. 40.00</div>
+        <hr style="border: 0; border-top: 1px solid #222; margin-bottom: 20px;">
+        <p style="font-size: 14px; margin-bottom: 12px;"><span style="color: #666;">Talla:</span> <strong>Talla Única</strong></p>
+        <div style="display: flex; gap: 10px; margin-bottom: 25px;">
+            <button style="background: #ffffff; color: #000000; border: 1px solid #fff; width: 55px; height: 38px; font-weight: bold; border-radius: 6px;">T/U</button>
+        </div>
+        <button onclick="enviarWhatsAppP9(event)" style="background: #ffffff; color: #000000; border: none; width: 100%; padding: 14px 0; font-size: 14px; font-weight: bold; border-radius: 6px; cursor: pointer;">Comprar</button>
+    </div>
 </div>
+
 <script>
-  function enviarWhatsAppP7(event) {
-      if (event) {
-          event.stopPropagation();
-          event.preventDefault();
-      }
-      const numero = "51949776995";
-      const mensaje = `¡Hola! Me interesa comprar la GORRA MILES.\n*Talla:* T/U *Precio:* S/. 40.00 ¿Tienen stock disponible?`;
-      window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, '_blank');
-      setTimeout(function() { cerrarModalGorraP7(); }, 250);
-  }
-
-  function enviarWhatsAppP8(event) {
-      if (event) {
-          event.stopPropagation();
-          event.preventDefault();
-      }
-      const numero = "51949776995";
-      const mensaje = `¡Hola! Me interesa comprar la GORRA MILES ROJA/BLANCO.\n*Talla:* T/U *Precio:* S/. 40.00 ¿Tienen stock disponible?`;
-      window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, '_blank');
-      setTimeout(function() { cerrarModalGorraP8(); }, 250);
-  }
-</script> ```
-
-<script>` limpio.
-4. Pega el código **sin comentarios de texto (`//`)** para evitar que se vuelva a bugear si se junta en una sola línea. Copia y pega esto tal cual:
-
-html
-<script>
-function enviarWhatsAppP7(event) {
+// Funciones del Modal P8 (Gorra Gris)
+function abrirModalGorraP8() {
+    document.getElementById('modal-tallas-p8').style.display = 'flex';
+}
+function cerrarModalGorraP8() {
+    document.getElementById('modal-tallas-p8').style.display = 'none';
+}
+function enviarWhatsAppP8(event) {
     if (event) { event.stopPropagation(); event.preventDefault(); }
     const numero = "51949776995";
     const mensaje = "¡Hola! Me interesa comprar la GORRA MILES.\n*Talla:* T/U *Precio:* S/. 40.00 ¿Tienen stock disponible?";
     window.open("https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje), "_blank");
-    setTimeout(function() { cerrarModalGorraP7(); }, 250);
+    setTimeout(function() { cerrarModalGorraP8(); }, 250);
 }
 
-function enviarWhatsAppP8(event) {
+// Funciones del Modal P9 (Gorra Roja/Blanco)
+function abrirModalGorraP9() {
+    document.getElementById('modal-tallas-p9').style.display = 'flex';
+}
+function cerrarModalGorraP9() {
+    document.getElementById('modal-tallas-p9').style.display = 'none';
+}
+function enviarWhatsAppP9(event) {
     if (event) { event.stopPropagation(); event.preventDefault(); }
     const numero = "51949776995";
     const mensaje = "¡Hola! Me interesa comprar la GORRA MILES ROJA/BLANCO.\n*Talla:* T/U *Precio:* S/. 40.00 ¿Tienen stock disponible?";
     window.open("https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje), "_blank");
-    setTimeout(function() { cerrarModalGorraP8(); }, 250);
+    setTimeout(function() { cerrarModalGorraP9(); }, 250);
 }
+
+// Cerrar haciendo clic afuera de los modales
+window.addEventListener('click', function(event) {
+    const modalP8 = document.getElementById('modal-tallas-p8');
+    const modalP9 = document.getElementById('modal-tallas-p9');
+    
+    if (modalP8 && event.target === modalP8) { cerrarModalGorraP8(); }
+    if (modalP9 && event.target === modalP9) { cerrarModalGorraP9(); }
+});
+</script>
+
 </script>
 
 </script>
