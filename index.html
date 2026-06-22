@@ -937,58 +937,40 @@ function procesarCompraCrema() {
 </div>
 // ==================== SCRIPTS DE CONTROL JAVASCRIPT ====================
 
-// --- Funciones Gorra Gris (Gorra Miles) ---
-function abrirModalGorraP8() {
-    document.getElementById('modal-tallas-p8').style.display = 'flex';
-    
+function enviarWhatsAppP8(event) {
+    // 1. Detiene el evento de inmediato para que no llegue al 'window.addEventListener'
+    if (event) {
+        event.stopPropagation();
+        event.preventDefault();
+    }
+
     const numero = "51949776995";
     const mensaje = `¡Hola! Me interesa comprar la GORRA MILES.\n*Talla:* T/U *Precio:* S/. 40.00 ¿Tienen stock disponible?`;
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
     
-    const botonWsp = document.getElementById('btn-wsp-p8');
-    if (botonWsp) {
-        botonWsp.href = url;
-        // Al hacer clic, espera 300ms para cerrar el modal de fondo sin interrumpir la apertura
-        botonWsp.onclick = function() {
-            setTimeout(cerrarModalGorraP8, 300);
-        };
+    // 2. Abre la pestaña de WhatsApp de forma limpia
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, '_blank');
+    
+    // 3. Esperamos un cuarto de segundo (250ms) antes de cerrar el modal de fondo
+    setTimeout(function() {
+        cerrarModalGorraP8();
+    }, 250);
+}
+
+function enviarWhatsAppP9(event) {
+    if (event) {
+        event.stopPropagation();
+        event.preventDefault();
     }
-}
 
-function cerrarModalGorraP8() {
-    document.getElementById('modal-tallas-p8').style.display = 'none';
-}
-
-
-// --- Funciones Gorra Roja y Blanco (Gorra Miles) ---
-function abrirModalGorraP9() {
-    document.getElementById('modal-tallas-p9').style.display = 'flex';
-    
     const numero = "51949776995";
     const mensaje = `¡Hola! Me interesa comprar la GORRA MILES ROJA/BLANCO.\n*Talla:* T/U *Precio:* S/. 40.00 ¿Tienen stock disponible?`;
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
     
-    const botonWsp = document.getElementById('btn-wsp-p9');
-    if (botonWsp) {
-        botonWsp.href = url;
-        botonWsp.onclick = function() {
-            setTimeout(cerrarModalGorraP9, 300);
-        };
-    }
-}
-
-function cerrarModalGorraP9() {
-    document.getElementById('modal-tallas-p9').style.display = 'none';
-}
-// Cerrar haciendo clic afuera de los modales
-window.addEventListener('click', function(event) {
-    const modalP8 = document.getElementById('modal-tallas-p8');
-    const modalP9 = document.getElementById('modal-tallas-p9');
-  
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, '_blank');
     
-    if (modalP8 && event.target == modalP8) { cerrarModalGorraP8(); }
-    if (modalP9 && event.target == modalP9) { cerrarModalGorraP9(); }
-
+    setTimeout(function() {
+        cerrarModalGorraP9();
+    }, 250);
+}
 </script>
 
 </script>
