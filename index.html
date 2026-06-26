@@ -528,43 +528,41 @@ window.addEventListener('click', function(event) {
 </div>
 
 <!-- =============================================
-     PRENDA 7: GORRA GRIS (ESTRUCTURA FORZADA)
+     PRENDA 7: GORRA GRIS (ESTRUCTURA FIJA Y CLIC ACTIVO)
 ================================================== -->
-<div style="width: 100%; display: flex; justify-content: flex-start; padding: 0 20px; box-sizing: border-box; margin-top: 20px;">
-    <div class="tarjeta-de-producto" style="background: #111; padding: 20px; border: 1px solid #222; border-radius: 8px; color: #fff; position: relative; box-sizing: border-box; width: 100%; max-width: 32%; min-width: 280px;">
-        <div style="display: flex; flex-direction: column; gap: 20px; height: 100%;">
-            <!-- FOTO DE LA GORRA -->
-            <div onclick="abrirModalGorraP7()" style="background: #ffffff; border-radius: 4px; position: relative; height: 320px; display: flex; justify-content: center; align-items: center; cursor: pointer; width: 100%;">
-                <img src="gorra-gris-frente.png" alt="Gorra Gris Miles" style="width: 100%; height: 100%; object-fit: contain; pointer-events: none;">
+<div class="tarjeta-de-producto" style="background: #111; padding: 20px; border: 1px solid #222; border-radius: 8px; color: #fff; position: relative; box-sizing: border-box; width: 100%; max-width: 320px; display: block; float: left; margin: 20px 0 40px 10px; clear: both;">
+    <div style="display: flex; flex-direction: column; gap: 20px; height: 100%;">
+        <!-- FOTO DE LA GORRA (Clic Restaurado) -->
+        <div onclick="abrirModalGorraP7()" style="background: #ffffff; border-radius: 4px; position: relative; height: 320px; display: flex; justify-content: center; align-items: center; cursor: pointer; width: 100%;">
+            <img src="gorra-gris-frente.png" alt="Gorra Gris Miles" style="width: 100%; height: 100%; object-fit: contain; pointer-events: none;">
+        </div>
+
+        <!-- COLUMNA DE DETALLES -->
+        <div class="informacion-interna" style="display: none; flex-direction: column; justify-content: center; position: relative; min-height: 320px; flex: 1;">
+            <!-- BOTÓN "X" PARA CERRAR -->
+            <div onclick="cerrarDetallesPrenda(this)" style="position: absolute; top: -10px; right: 0; text-align: center; cursor: pointer; color: #aaa; z-index: 10;">
+                <span style="font-size: 24px; font-weight: bold; display: block; line-height: 20px;">&times;</span>
+                <span style="font-size: 0.65rem; display: block; margin-top: 2px;">Cerrar</span>
             </div>
 
-            <!-- COLUMNA DE DETALLES -->
-            <div class="informacion-interna" style="display: none; flex-direction: column; justify-content: center; position: relative; min-height: 320px; flex: 1;">
-                <!-- BOTÓN "X" PARA CERRAR -->
-                <div onclick="cerrarDetallesPrenda(this)" style="position: absolute; top: -10px; right: 0; text-align: center; cursor: pointer; color: #aaa; z-index: 10;">
-                    <span style="font-size: 24px; font-weight: bold; display: block; line-height: 20px;">&times;</span>
-                    <span style="font-size: 0.65rem; display: block; margin-top: 2px;">Cerrar</span>
-                </div>
+            <h2 class="nombre-prod" style="font-size: 1.5rem; margin: 0 40px 10px 0; text-transform: uppercase; color: #fff;">GORRA MILES GRIS</h2>
+            <p class="precio-prod" style="font-size: 1.3rem; font-weight: bold; margin: 10px 0; color: #fff;">S/. 40.00</p>
+            
+            <hr style="border: 0; border-top: 1px solid #222; margin-bottom: 20px;">
 
-                <h2 class="nombre-prod" style="font-size: 1.5rem; margin: 0 40px 10px 0; text-transform: uppercase; color: #fff;">GORRA MILES GRIS</h2>
-                <p class="precio-prod" style="font-size: 1.3rem; font-weight: bold; margin: 10px 0; color: #fff;">S/. 40.00</p>
-                
-                <hr style="border: 0; border-top: 1px solid #222; margin-bottom: 20px;">
-
-                <!-- SECCIÓN DE TALLAS -->
-                <p style="font-size: 14px; text-align: left; margin-bottom: 12px; font-family: Arial, sans-serif;">
-                    <span style="color: #666;">Talla:</span> <span id="talla-seleccionada-texto-p7" style="font-weight: bold; color: #fff;">Selecciona Talla</span>
-                </p>
-                
-                <div style="display: flex; gap: 10px; margin-bottom: 25px; text-align: left;">
-                    <button onclick="seleccionarTallaP7('T/U')" class="btn-talla-p7" style="background: transparent; color: #fff; border: 1px solid #fff; width: 58px; height: 40px; cursor: pointer; border-radius: 4px; font-weight: bold;">T/U</button>
-                </div>
-
-                <!-- BOTÓN DE COMPRA -->
-                <button onclick="enviarWhatsAppP7()" style="background: #ffffff; color: #000000; border: none; width: 100%; padding: 14px 0; font-size: 14px; font-weight: bold; cursor: pointer; border-radius: 4px; text-transform: uppercase;">
-                    COMPRAR AHORA
-                </button>
+            <!-- SECCIÓN DE TALLAS -->
+            <p style="font-size: 14px; text-align: left; margin-bottom: 12px; font-family: Arial, sans-serif;">
+                <span style="color: #666;">Talla:</span> <span id="talla-seleccionada-texto-p7" style="font-weight: bold; color: #fff;">Selecciona Talla</span>
+            </p>
+            
+            <div style="display: flex; gap: 10px; margin-bottom: 25px; text-align: left;">
+                <button onclick="seleccionarTallaP7('T/U')" class="btn-talla-p7" style="background: transparent; color: #fff; border: 1px solid #fff; width: 58px; height: 40px; cursor: pointer; border-radius: 4px; font-weight: bold;">T/U</button>
             </div>
+
+            <!-- BOTÓN DE COMPRA -->
+            <button onclick="enviarWhatsAppP7()" style="background: #ffffff; color: #000000; border: none; width: 100%; padding: 14px 0; font-size: 14px; font-weight: bold; cursor: pointer; border-radius: 4px; text-transform: uppercase;">
+                COMPRAR AHORA
+            </button>
         </div>
     </div>
 </div>
